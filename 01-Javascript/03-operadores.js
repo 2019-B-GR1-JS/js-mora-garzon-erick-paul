@@ -74,3 +74,29 @@ console.log('respuesta :',respuesta);
 const respuesta2 = arreglo.map(
     (x) => (x/2)+7).some((y)=> y < 10);
 console.log('respuesta2 :',respuesta2);
+
+
+
+
+
+
+const respuestaFind = arreglo.find(
+    (valorActual, indice, arreglo) => {
+        return valorActual === 8;
+    }
+);
+console.log('respuestaFind :',respuestaFind);
+
+const respuestaFindIndex = arreglo.findIndex(
+    (valorActual) => {
+        return valorActual === 8;
+    }
+);
+console.log('respuestaFindIndex :',respuestaFindIndex);
+
+const respuestaReduce = arreglo.reduce(
+    (valorInicial, valorActual, indice, array) => {
+        return valorInicial + valorActual;
+    },0 //valor inicial
+);
+console.log('respuesta Reduce :',respuestaReduce);
