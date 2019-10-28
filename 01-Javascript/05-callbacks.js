@@ -1,4 +1,4 @@
-
+//05-callbacks
 function calculo(numUno, numDos, funcionCalculo){
     const total = numUno + numDos;
     return funcionCalculo(numUno, numDos, total);

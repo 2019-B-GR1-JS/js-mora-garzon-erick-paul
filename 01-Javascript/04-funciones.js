@@ -1,3 +1,4 @@
+//04-funciones
 function imprimirMensaje(mensaje){
     //console.log("Mensaje");
     //console.log(`Mensaje ${mensaje}`); //mesaje is undefined
