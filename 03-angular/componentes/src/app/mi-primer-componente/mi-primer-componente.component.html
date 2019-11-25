@@ -1,11 +1,24 @@
+<h1> {{titulo}} </h1>
+<!-- {{}} -> Interpolacion -->
+<!-- Mostrar html -->
+<!-- Acceder a metodos y propiedades de la clase -->
 <img width="200px"
      heigth="200px"
-     src="https://www.imagen.com.mx/assets/img/imagen_share.png" alt="">
+     [src]="imagen" alt="">
 
-<p>Texto</p>
-<button (click)="saludar()"
+<!--Property Binding -->
+<!-- [atributo]="valor" -> Atributos -->
+<p>{{textoImagen}}</p>
+
+<!--Event Binding -->
+<!-- [evento]="miFuncion($event)" -> Evento -->
+<button (blur)="aumentarSueldo()"
 >
-  Hola
+  {{textoBoton}}
 </button>
+
+
+
+
 
 
