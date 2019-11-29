@@ -2,9 +2,18 @@
 <!-- {{}} -> Interpolacion -->
 <!-- Mostrar html -->
 <!-- Acceder a metodos y propiedades de la clase -->
-<img width="200px"
-     heigth="200px"
+<img width="200 px"
+     heigth="200 px"
      [src]="imagen" alt="">
+
+
+<input type="text" (keypress)="calcular1($event)">
+<input type="text" (keypress)="calcular($event)">
+<button (keypress)="calcular($event)"
+>
+  =
+</button>
+<p>{{resultado.emit()}}</p>
 
 <!--Property Binding -->
 <!-- [atributo]="valor" -> Atributos -->

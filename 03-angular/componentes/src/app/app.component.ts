@@ -46,4 +46,8 @@ export class AppComponent {
   imprimirSueldo(sueldo:string){
     console.log(sueldo);
   }
+
+  imprimirResultado(resultado:string){
+    console.log(resultado);
+  }
 }
