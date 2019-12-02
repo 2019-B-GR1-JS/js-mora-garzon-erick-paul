@@ -36,10 +36,10 @@ export class MiPrimerComponenteComponent implements OnInit {
 
   /*@Input()
   res:string;*/
-  res1=0;
-  res2=0;
-  res3=0;
-  res4=0;
+  suma=0;
+  resta=0;
+  mult=0;
+  div=0;
 
   @Output() //Evento
   public resultado = new EventEmitter();
@@ -81,68 +81,67 @@ export class MiPrimerComponenteComponent implements OnInit {
     //this.textoBoton = (+this.textoBoton) + 1).toString();
   }
 
-  calcular(evento:KeyboardEvent){
-
-    console.log(evento);
-
-
-
+  calcularNum2(evento){
     const elemento = evento.srcElement as any;
-    elemento.value;
+    this.num2 = elemento.value;
 
+    console.log('num2 '+elemento.value);
+/*
     //this.resultado.emit(Number(elemento.value) + Number(elemento.value));
-    this.res1= (Number(elemento.value) + Number(elemento.value));
-    this.res2= (Number(elemento.value) - Number(elemento.value));
-    this.res3= (Number(elemento.value) * Number(elemento.value));
-    this.res4= (Number(elemento.value) / Number(elemento.value));
-
-    console.log('elemento '+elemento);
-    console.log('elemento '+elemento.value);
-    console.log('evento '+evento);
+    this.suma= (Number(elemento.value) + Number(elemento.value));
+    this.resta= (Number(elemento.value) - Number(elemento.value));
+    this.mult= (Number(elemento.value) * Number(elemento.value));
+    this.div= (Number(elemento.value) / Number(elemento.value));
 
     //console.log('res '+this.resultado);
-    console.log('suma '+this.res1);
-    console.log('resta '+this.res2);
-    console.log('mult '+this.res3);
-    console.log('div '+this.res4);
+    console.log('suma 2 '+this.suma);
+    console.log('resta 2 '+this.resta);
+    console.log('mult 2 '+this.mult);
+    console.log('div 2 '+this.div);
     //console.log('num1 '+this.num1);
     //console.log('num2 '+this.num2);
-    this.res1 = 0;
-    this.res2 = 0;
-    this.res3 = 0;
-    this.res4 = 0;
+    this.suma = 0;
+    this.resta = 0;
+    this.mult = 0;
+    this.div = 0;*/
+    this.resolver();
   }
 
-  calcular1(evento:KeyboardEvent){
-
-
-    console.log('evento '+evento);
-
+  calcularNum1(evento){
     const elemento = evento.srcElement as any;
-    elemento.value;
+    this.num1 = elemento.value;
 
-
-    console.log('elemento '+elemento);
-    console.log('elemento '+elemento.value);
-    console.log('evento '+evento);
-
+    console.log('num1 '+elemento.value);
+/*
     //this.resultado.emit(Number(elemento.value) + Number(elemento.value));
-    this.res1= (this.res1+ Number(elemento.value) + Number(elemento.value));
-    this.res2= (this.res1- Number(elemento.value) - Number(elemento.value));
-    this.res3= (this.res1*Number(elemento.value) * Number(elemento.value));
-    this.res4= (this.res1/ Number(elemento.value) / Number(elemento.value));
+    this.suma= (this.suma+ Number(elemento.value) + Number(elemento.value));
+    this.resta= (this.suma- Number(elemento.value) - Number(elemento.value));
+    this.mult= (this.suma*Number(elemento.value) * Number(elemento.value));
+    this.div= (this.suma/ Number(elemento.value) / Number(elemento.value));
 
     //console.log('res '+this.resultado);
-    console.log('suma '+this.res1);
-    console.log('resta '+this.res2);
-    console.log('mult '+this.res3);
-    console.log('div '+this.res4);
+    console.log('suma 1 '+this.suma);
+    console.log('resta 1 '+this.resta);
+    console.log('mult 1 '+this.mult);
+    console.log('div 1 '+this.div);
     //console.log('num1 '+this.num1);
     //console.log('num2 '+this.num2);
-    this.res1 = 0;
-    this.res2 = 0;
-    this.res3 = 0;
-    this.res4 = 0;
+    this.suma = 0;
+    this.resta = 0;
+    this.mult = 0;
+    this.div = 0;*/
+    this.resolver();
+  }
+
+  resolver(){
+    this.suma= (Number(this.num1) + Number(this.num2));
+    this.resta= (Number(this.num1) - Number(this.num2));
+    this.mult= (Number(this.num1) * Number(this.num2));
+    this.div= (Number(this.num1) / Number(this.num2));
+    console.log('suma '+this.suma);
+    console.log('resta '+this.resta);
+    console.log('multiplicacion '+this.mult);
+    console.log('division '+this.div);
   }
 
 }

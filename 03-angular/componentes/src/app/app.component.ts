@@ -6,6 +6,10 @@ import { Component, Input, OnInit} from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+  fecha = new Date();
+  sueldo = 12.001;
+  universidad = 'EPN';
+
   title = 'componentes';
   arregloObjetos = [
     {
@@ -48,6 +52,6 @@ export class AppComponent {
   }
 
   imprimirResultado(resultado:string){
-    console.log(resultado);
+    //console.log("resultado: "+resultado);
   }
 }
