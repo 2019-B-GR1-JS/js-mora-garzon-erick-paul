@@ -4,6 +4,38 @@
   }
 </style>
 <h1>Inicio</h1>
+
+<h2>Pipes</h2>
+{{fecha | date: 'yyyy/MM/dd'}}
+{{sueldo | currency}}
+{{universidad | lowercase}}
+
+<h2>Directivas</h2>
+<p *ngIf="true">SI</p>
+<p *ngIf="false">NO</p>
+<div [hidden]="true">
+  Estoy oculto no eliminado
+</div>
+
+<ul>
+  <li *ngFor="let nombreVariable of arregloObjetos">
+    <button>a</button>
+    <a href="">LINK</a>
+    <p>ALOO</p>
+    <p>{{nombreVariable.nombre}}</p>
+    <app-mi-primer-componente
+      [titulo]="nombreVariable.apellido"
+      [textoImagen]="nombreVariable.nombre"
+      [textoBoton]="nombreVariable.sueldo.toString()"
+      [imagen]="nombreVariable.comida"
+      (cambioSueldo)="imprimirSueldo($event)"
+      (resultado)="imprimirResultado($event)">
+    </app-mi-primer-componente>
+  </li>
+</ul>
+
+
+
 <app-mi-primer-componente
   [titulo]="arregloObjetos[0].apellido"
   [textoImagen]="arregloObjetos[0].nombre"
@@ -23,7 +55,6 @@
 
 
 </app-mi-primer-componente>
-
 <app-mi-primer-componente
   [titulo]="arregloObjetos[2].apellido"
   [textoImagen]="arregloObjetos[2].nombre"
@@ -33,3 +64,6 @@
   (resultado)="imprimirResultado($event)">
 
 </app-mi-primer-componente>
+
+
+
