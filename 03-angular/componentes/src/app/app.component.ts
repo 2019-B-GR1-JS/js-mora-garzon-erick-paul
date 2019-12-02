@@ -48,6 +48,6 @@ export class AppComponent {
   }
 
   imprimirResultado(resultado:string){
-    console.log(resultado);
+    //console.log("resultado: "+resultado);
   }
 }

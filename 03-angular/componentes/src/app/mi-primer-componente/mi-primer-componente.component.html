@@ -7,9 +7,9 @@
      [src]="imagen" alt="">
 
 
-<input type="text" (keypress)="calcular1($event)">
-<input type="text" (keypress)="calcular($event)">
-<button (keypress)="calcular($event)"
+<input type="text" (change)="calcularNum1($event)">
+<input type="text" (change)="calcularNum2($event)">
+<button (keypress)="calcularNum2($event)"
 >
   =
 </button>
