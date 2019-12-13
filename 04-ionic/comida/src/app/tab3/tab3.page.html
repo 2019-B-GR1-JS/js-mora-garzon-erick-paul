@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Formularios
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!--Formularios de TEMPLATE -->
+  <form (ngSubmit)="crearUsuario(usuarioFormulario)"
+        #usuarioFormulario="ngForm">
+    {{usuario.nombre}}
+    <!--Variable de TEMPLATE -->
+    <!-- <h1 #papa>papa</h1> -->
+     <input type="text"
+            name="nombre"
+            required
+            [(ngModel)]="usuario.nombre"
+            #nombreInput="ngModel">
+    Valid {{nombreInput.valid}}
+    Invalid {{nombreInput.invalid}}
+    Touch {{nombreInput.touched}}
+    Untouched {{nombreInput.untouched}}
+    Disabled {{nombreInput.disabled}}
+    Enabled {{nombreInput.enabled}}
+    Pristine {{nombreInput.pristine}}
+    Dirty {{nombreInput.dirty}}
+    Errors
+    <pre>
+      {{nombreInput.errors | json}}
+    </pre>
+
+    <!-- <button [disabled]="nombreInput.errors">Aceptar</button> -->
+    <button [disabled]="usuarioFormulario.invalid">Aceptar</button>
+   </form>
+ </ion-content>
