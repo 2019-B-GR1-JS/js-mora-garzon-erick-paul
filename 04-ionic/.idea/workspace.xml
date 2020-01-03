@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5181e4e6-7604-48b8-af87-6dee253fb0b8" name="Default Changelist" comment="" />
+    <list default="true" id="5181e4e6-7604-48b8-af87-6dee253fb0b8" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../03-angular/componentes/src/app/mi-primer-componente/mi-primer-componente.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../03-angular/componentes/src/app/mi-primer-componente/mi-primer-componente.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-angular/componentes/src/app/mi-primer-componente/mi-primer-componente.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../03-angular/componentes/src/app/mi-primer-componente/mi-primer-componente.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/comida/src/app/tabs/tabs.page.html" beforeDir="false" afterPath="$PROJECT_DIR$/comida/src/app/tabs/tabs.page.html" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,6 +27,7 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/comida/node_modules/typescript/lib" />
   </component>
   <component name="RunDashboard">
@@ -48,6 +54,12 @@
       <updated>1576275396578</updated>
       <workItem from="1576275398291" duration="53000" />
       <workItem from="1576275452890" duration="2371000" />
+      <workItem from="1577566449099" duration="3678000" />
+      <workItem from="1577649606929" duration="1808000" />
+      <workItem from="1577651701887" duration="14067000" />
+      <workItem from="1578003025743" duration="17513000" />
+      <workItem from="1578085620352" duration="68000" />
+      <workItem from="1578085700288" duration="5721000" />
     </task>
     <servers />
   </component>

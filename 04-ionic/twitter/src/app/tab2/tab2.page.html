@@ -1,0 +1,46 @@
+
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+    <ion-button color="primary">
+      <ion-icon slot="icon-only" name="arrow-back"></ion-icon>
+    </ion-button>
+      <input placeholder="Buscar en Twitter"
+             type="text"
+             name="buscar">
+    </ion-buttons>
+
+    <ion-buttons slot="secondary">
+      <ion-button color="medium">
+        <ion-icon slot="icon-only" name="settings"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+
+      <ion-col size="12">
+        <ion-card class="card" *ngFor="let tendencia of arregloTendencias">
+          <ion-card-header>
+              <span class="numero">
+                {{tendencia.numero}}
+              </span>
+          </ion-card-header>
+          <ion-card-content>
+            <span class="tema">
+              {{tendencia.tema}}
+            </span>
+          </ion-card-content>
+            <ion-card-content>
+            <span class="tweet">
+              {{tendencia.tweets}}
+            </span>
+            </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
