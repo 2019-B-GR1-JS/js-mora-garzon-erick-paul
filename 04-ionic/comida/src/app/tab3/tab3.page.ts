@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {NgForm} from "@angular/forms";
+import {NgForm} from '@angular/forms';
 
 @Component({
   selector: 'app-tab3',
@@ -8,12 +8,23 @@ import {NgForm} from "@angular/forms";
 })
 export class Tab3Page {
   usuario = {
-    nombre: 'Erick',
-    apellido: 'Mora'
+    nombre: '',
+    correo: '',
+    edad: 0,
+    password: '',
+    passwordConfirmacion: ''
   };
 
   constructor() {}
   crearUsuario(formulario: NgForm) {
     console.log(formulario);
+  }
+
+  validarPasswordsIguales(): boolean {
+    if (this.usuario.password === this.usuario.passwordConfirmacion) {
+      return false;
+    } else {
+      return true;
+    }
   }
 }
