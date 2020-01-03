@@ -36,16 +36,18 @@ export class MiPrimerComponenteComponent implements OnInit {
 
   /*@Input()
   res:string;*/
-  suma=0;
-  resta=0;
-  mult=0;
-  div=0;
+  ancho: number;
+  alto: number;
+  suma: number;
+  resta: number;
+  mult: number;
+  div: number;
 
   @Output() //Evento
   public resultado = new EventEmitter();
   //resultado: any;
 
-  tamanoImagen = 200;
+
 
   @Output() //Evento
   public cambioSueldo = new EventEmitter();
@@ -59,8 +61,15 @@ export class MiPrimerComponenteComponent implements OnInit {
   }//instancia de la clase
 
   ngOnInit(): void { //la clase esta lista
+    this.ancho = 100;
+    this.alto = 100;
+    this.suma = 0;
+    this.resta = 0;
+    this.mult = 0;
+    this.div = 0;
     console.log('Esta listo');
   }
+
 
   ngOnDestroy(): void{ //la clase esta destruida
 
@@ -81,29 +90,17 @@ export class MiPrimerComponenteComponent implements OnInit {
     //this.textoBoton = (+this.textoBoton) + 1).toString();
   }
 
+  aumentarTamanioImagen() {
+    this.ancho = this.ancho + 10;
+    this.alto = this.alto + 10;
+  }
+
   calcularNum2(evento){
     const elemento = evento.srcElement as any;
     this.num2 = elemento.value;
 
     console.log('num2 '+elemento.value);
-/*
-    //this.resultado.emit(Number(elemento.value) + Number(elemento.value));
-    this.suma= (Number(elemento.value) + Number(elemento.value));
-    this.resta= (Number(elemento.value) - Number(elemento.value));
-    this.mult= (Number(elemento.value) * Number(elemento.value));
-    this.div= (Number(elemento.value) / Number(elemento.value));
 
-    //console.log('res '+this.resultado);
-    console.log('suma 2 '+this.suma);
-    console.log('resta 2 '+this.resta);
-    console.log('mult 2 '+this.mult);
-    console.log('div 2 '+this.div);
-    //console.log('num1 '+this.num1);
-    //console.log('num2 '+this.num2);
-    this.suma = 0;
-    this.resta = 0;
-    this.mult = 0;
-    this.div = 0;*/
     this.resolver();
   }
 
@@ -112,24 +109,7 @@ export class MiPrimerComponenteComponent implements OnInit {
     this.num1 = elemento.value;
 
     console.log('num1 '+elemento.value);
-/*
-    //this.resultado.emit(Number(elemento.value) + Number(elemento.value));
-    this.suma= (this.suma+ Number(elemento.value) + Number(elemento.value));
-    this.resta= (this.suma- Number(elemento.value) - Number(elemento.value));
-    this.mult= (this.suma*Number(elemento.value) * Number(elemento.value));
-    this.div= (this.suma/ Number(elemento.value) / Number(elemento.value));
 
-    //console.log('res '+this.resultado);
-    console.log('suma 1 '+this.suma);
-    console.log('resta 1 '+this.resta);
-    console.log('mult 1 '+this.mult);
-    console.log('div 1 '+this.div);
-    //console.log('num1 '+this.num1);
-    //console.log('num2 '+this.num2);
-    this.suma = 0;
-    this.resta = 0;
-    this.mult = 0;
-    this.div = 0;*/
     this.resolver();
   }
 

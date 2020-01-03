@@ -2,26 +2,34 @@
 <!-- {{}} -> Interpolacion -->
 <!-- Mostrar html -->
 <!-- Acceder a metodos y propiedades de la clase -->
-<img width="200 px"
-     heigth="200 px"
+<img width="200px"
+     heigth="200px"
      [src]="imagen" alt="">
-
-
+<p></p>
+<h2>Calculadora</h2>
+<label >Primer número:  </label>
 <input type="text" (change)="calcularNum1($event)">
+<p></p>
+<label >Segundo número: </label>
 <input type="text" (change)="calcularNum2($event)">
-<button (keypress)="calcularNum2($event)"
->
-  =
-</button>
-<p>{{resultado.emit()}}</p>
+
+<p>Suma: {{suma}}</p>
+<p>Resta: {{resta}}</p>
+<p>Multiplicación: {{mult}}</p>
+<p>División: {{div}}</p>
+
+
+
+
 
 <!--Property Binding -->
 <!-- [atributo]="valor" -> Atributos -->
-<p>{{textoImagen}}</p>
+<!--<p>{{textoImagen}}</p>-->
 
 <!--Event Binding -->
 <!-- [evento]="miFuncion($event)" -> Evento -->
 <button (blur)="aumentarSueldo()"
+        (click)="aumentarTamanioImagen()"
 >
   {{textoBoton}}
 </button>
