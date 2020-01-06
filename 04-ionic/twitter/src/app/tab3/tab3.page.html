@@ -2,10 +2,10 @@
 <ion-header>
   <ion-toolbar>
     <ion-buttons slot="start">
-    <ion-button color="primary">
-      <ion-icon slot="icon-only" name="arrow-back"></ion-icon>
-    </ion-button>
-    <ion-label class="labelHeader" >Notificaciones</ion-label>
+      <ion-button color="primary">
+        <ion-icon slot="icon-only" name="arrow-back"></ion-icon>
+      </ion-button>
+      <ion-label class="labelHeader" >Notificaciones</ion-label>
     </ion-buttons>
     <ion-buttons slot="secondary">
       <ion-button color="medium">
@@ -25,9 +25,12 @@
             <ion-avatar class="avatar">
               <img class="imagenPerfil" [src]="publicacion.perfil" alt="imagen perfil">
             </ion-avatar>
-            <span class="tipoPerfil">
+            <ion-card-subtitle>
+              <span class="tipoPerfil">
               {{publicacion.tipo}}
             </span>
+            </ion-card-subtitle>
+
           </ion-card-header>
           <ion-card-content>
             <span class="texto">
