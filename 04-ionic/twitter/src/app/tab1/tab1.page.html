@@ -1,76 +1,76 @@
 <ion-header>
-    <ion-toolbar>
-        <ion-buttons slot="start">
+  <ion-toolbar>
+    <ion-buttons slot="start">
 
-                <ion-avatar slot="start" class="avatar" *ngFor="let publicacion2 of imagen">
-                    <img class="fotoPerfil" [src]="publicacion2.fotoPerfil" alt="imagen perfil">
-                </ion-avatar>
+      <ion-avatar slot="start" class="avatar" *ngFor="let publicacion2 of imagen">
+        <img class="fotoPerfil" [src]="publicacion2.fotoPerfil" alt="imagen perfil">
+      </ion-avatar>
 
-            <ion-label class="labelHeader">Inicio</ion-label>
-        </ion-buttons>
-        <ion-buttons slot="secondary">
-            <ion-button color="primary">
-                <ion-icon slot="icon-only" name="star"></ion-icon>
-            </ion-button>
-        </ion-buttons>
-    </ion-toolbar>
+      <ion-label class="labelHeader">Inicio</ion-label>
+    </ion-buttons>
+    <ion-buttons slot="secondary">
+      <ion-button color="primary">
+        <ion-icon slot="icon-only" name="star"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
 </ion-header>
 
 <ion-content>
-    <ion-grid>
-        <ion-row>
+  <ion-grid>
+    <ion-row>
 
-            <ion-col size="12">
-                <ion-card class="card" *ngFor="let publicacion of arregloTweets">
-                    <ion-card-header>
-                        <ion-avatar class="avatar">
-                            <img class="imagenPerfil" [src]="publicacion.perfil" alt="imagen perfil">
-                        </ion-avatar>
-                        <span class="nombrePerfil">
+      <ion-col size="12">
+        <ion-card class="card" *ngFor="let publicacion of arregloTweets">
+          <ion-card-header>
+            <ion-avatar class="avatar">
+              <img class="imagenPerfil" [src]="publicacion.perfil" alt="imagen perfil">
+            </ion-avatar>
+            <span class="nombrePerfil">
               {{publicacion.nombre}}
             </span>
-                        <span class="nombreUsuario">
+            <span class="nombreUsuario">
               {{publicacion.usuario}}
             </span>
-                        <span class="tiempo">
+            <span class="tiempo">
               {{publicacion.tiempo}}
             </span>
-                    </ion-card-header>
-                    <ion-card-content>
+          </ion-card-header>
+          <ion-card-content>
             <span class="texto">
               {{publicacion.texto}}
             </span>
-                        <img class="imagen" [src]="publicacion.imagen" alt="imagen">
-                        <ion-buttons slot="secondary">
-                            <ion-button>
-                                <ion-icon class="icon" name="chatbubbles" slot="start"></ion-icon>
-                            </ion-button>
-                            <span class="comentario">
+            <img class="imagen" [src]="publicacion.imagen" alt="imagen">
+            <ion-buttons slot="secondary">
+              <ion-button>
+                <ion-icon class="icon" name="chatbubbles" slot="start"></ion-icon>
+              </ion-button>
+              <span class="comentario">
                                 {{publicacion.comentarios}}
                             </span>
 
-                            <ion-button>
-                                <ion-icon class="icon" name="repeat" slot="start"></ion-icon>
-                            </ion-button>
-                            <span class="retweet">
+              <ion-button>
+                <ion-icon class="icon" name="repeat" slot="start"></ion-icon>
+              </ion-button>
+              <span class="retweet">
                                 {{publicacion.retweets}}
                             </span>
 
-                            <ion-button>
-                                <ion-icon class="icon" name="heart" slot="start"></ion-icon>
-                            </ion-button>
-                            <span class="gusta">
+              <ion-button>
+                <ion-icon class="icon" name="heart" slot="start"></ion-icon>
+              </ion-button>
+              <span class="gusta">
                                 {{publicacion.gusta}}
                             </span>
-                            <ion-button>
-                                <ion-icon class="icon" name="share" slot="start"></ion-icon>
-                            </ion-button>
-                        </ion-buttons>
-                    </ion-card-content>
-                </ion-card>
-            </ion-col>
-        </ion-row>
-    </ion-grid>
+              <ion-button>
+                <ion-icon class="icon" name="share" slot="start"></ion-icon>
+              </ion-button>
+            </ion-buttons>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>
 
 <!--<ion-header>

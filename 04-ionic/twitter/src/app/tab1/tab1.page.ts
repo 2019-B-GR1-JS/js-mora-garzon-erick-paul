@@ -7,9 +7,9 @@ import { Component, Input } from '@angular/core';
 })
 export class Tab1Page {
 
-    imagen = [{
-        fotoPerfil: 'https://pbs.twimg.com/profile_images/1117604340288688128/jC_tbMrr_bigger.png',
-    }];
+  imagen = [{
+    fotoPerfil: 'https://pbs.twimg.com/profile_images/1117604340288688128/jC_tbMrr_bigger.png',
+  }];
 
   arregloTweets = [
     {
@@ -35,7 +35,7 @@ export class Tab1Page {
       gusta: '15'
     },
     {
-      perfil: 'https://pbs.twimg.com/profile_images/1208092291350421505/W-HU_SH8_400x400.jpg',
+      perfil: 'https://pbs.twimg.com/profile_images/1212398377553412096/HaWAuh90_400x400.jpg',
       nombre: 'Pokemon',
       usuario: '@Pokemon',
       tiempo: '20 dic',

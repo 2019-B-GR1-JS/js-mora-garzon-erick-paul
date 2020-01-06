@@ -2,10 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5181e4e6-7604-48b8-af87-6dee253fb0b8" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../03-angular/componentes/src/app/mi-primer-componente/mi-primer-componente.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../03-angular/componentes/src/app/mi-primer-componente/mi-primer-componente.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../03-angular/componentes/src/app/mi-primer-componente/mi-primer-componente.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../03-angular/componentes/src/app/mi-primer-componente/mi-primer-componente.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comida/src/app/tabs/tabs.page.html" beforeDir="false" afterPath="$PROJECT_DIR$/comida/src/app/tabs/tabs.page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/twitter/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/twitter/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/twitter/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/twitter/src/app/app.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/twitter/src/app/tab1/tab1.page.html" beforeDir="false" afterPath="$PROJECT_DIR$/twitter/src/app/tab1/tab1.page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/twitter/src/app/tab1/tab1.page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/twitter/src/app/tab1/tab1.page.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/twitter/src/app/tab2/tab2.page.html" beforeDir="false" afterPath="$PROJECT_DIR$/twitter/src/app/tab2/tab2.page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/twitter/src/app/tab3/tab3.page.html" beforeDir="false" afterPath="$PROJECT_DIR$/twitter/src/app/tab3/tab3.page.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -60,6 +63,8 @@
       <workItem from="1578003025743" duration="17513000" />
       <workItem from="1578085620352" duration="68000" />
       <workItem from="1578085700288" duration="5721000" />
+      <workItem from="1578343502913" duration="196000" />
+      <workItem from="1578343735057" duration="2380000" />
     </task>
     <servers />
   </component>
