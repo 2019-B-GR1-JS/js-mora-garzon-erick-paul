@@ -7,6 +7,11 @@ import {HttpClientModule} from "@angular/common/http";
 import {FormsModule} from "@angular/forms";
 import {UsuarioRestService} from "./services/rest/usuario-rest.service";
 import {ButtonModule} from 'primeng/button';
+import {TableModule} from 'primeng/table';
+import {InputTextModule} from 'primeng/inputtext';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatInputModule} from '@angular/material/input';
+import {MatFormFieldModule} from "@angular/material/form-field";
 
 @NgModule({
   declarations: [
@@ -18,6 +23,10 @@ import {ButtonModule} from 'primeng/button';
     FormsModule,
     HttpClientModule,
     ButtonModule,
+    TableModule,
+    InputTextModule,
+    BrowserAnimationsModule,
+    MatFormFieldModule,
     // -> HTTP
   ],
   providers: [
