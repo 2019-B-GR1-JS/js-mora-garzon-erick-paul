@@ -1,16 +1,20 @@
-import { Component, Input } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
+import {HttpClient} from "@angular/common/http";
 
 @Component({
   selector: 'app-tab1',
   templateUrl: 'tab1.page.html',
   styleUrls: ['tab1.page.scss']
 })
-export class Tab1Page {
+export class Tab1Page implements OnInit{
+
+  url = 'http://localhost:1337'; //sails
+  arregloTweets2 = [];
 
   imagen = [{
     fotoPerfil: 'https://pbs.twimg.com/profile_images/1117604340288688128/jC_tbMrr_bigger.png',
   }];
-
+/*
   arregloTweets = [
     {
       perfil: 'https://pbs.twimg.com/profile_images/984857614247919616/V7z-khzu_400x400.jpg',
@@ -108,6 +112,43 @@ export class Tab1Page {
       gusta: '759'
     }
   ];
+*/
+
+
+  constructor(
+      private readonly _httpClient: HttpClient
+  ){
+    //CASI NUNCA HACER CONFIGURACIONES
+  }
+
+
+
+  ngOnInit(): void {
+
+    const urlTweets = this.url + '/tweet'; //sails
+    // $ -> Observable
+
+    const tweets$ = this._httpClient.get(
+        urlTweets
+    );
+
+    tweets$
+        .subscribe(
+            (tweets: any[])=>{ //TRY
+              console.log('Tweets: ', tweets);
+              this.arregloTweets2 = tweets
+            },
+            (error)=>{ // CATCH
+              console.error({
+                error: error,
+                mensaje: 'Error consultando tweets'
+              })
+            }
+
+
+        );
+
+  }
 
 }
 

@@ -1,14 +1,18 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {HttpClient} from "@angular/common/http";
 
 @Component({
   selector: 'app-tab2',
   templateUrl: 'tab2.page.html',
   styleUrls: ['tab2.page.scss']
 })
-export class Tab2Page {
+export class Tab2Page implements OnInit{
+
+  url = 'http://localhost:1337'; //sails
+  arregloTendencias2 = [];
 
   buscar = 'Buscar en Twitter';
-
+/*
   arregloTendencias = [
     {
       numero: '1 - Tendencias globales',
@@ -61,5 +65,45 @@ export class Tab2Page {
       tweets: '22,6 mil Tweets'
     }
   ];
+*/
+  constructor(
+      private readonly _httpClient: HttpClient
+  ){
+    //CASI NUNCA HACER CONFIGURACIONES
+  }
+
+
+
+  ngOnInit(): void {
+
+    const urlTendencias = this.url + '/tendencia'; //sails
+    // $ -> Observable
+
+    const tendencias$ = this._httpClient.get(
+        urlTendencias
+    );
+
+    tendencias$
+        .subscribe(
+            (tendencias: any[])=>{ //TRY
+              console.log('Tendencia: ', tendencias);
+              this.arregloTendencias2 = tendencias
+            },
+            (error)=>{ // CATCH
+              console.error({
+                error: error,
+                mensaje: 'Error consultando tendencias'
+              })
+            }
+
+
+        );
+
+  }
 
 }
+
+
+
+
+

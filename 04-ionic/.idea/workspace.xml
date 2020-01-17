@@ -3,12 +3,15 @@
   <component name="ChangeListManager">
     <list default="true" id="5181e4e6-7604-48b8-af87-6dee253fb0b8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/twitter/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/twitter/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/twitter/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/twitter/src/app/app.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/twitter/src/app/tab1/tab1.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/twitter/src/app/tab1/tab1.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/twitter/src/app/tab1/tab1.page.html" beforeDir="false" afterPath="$PROJECT_DIR$/twitter/src/app/tab1/tab1.page.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/twitter/src/app/tab1/tab1.page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/twitter/src/app/tab1/tab1.page.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/twitter/src/app/tab2/tab2.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/twitter/src/app/tab2/tab2.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/twitter/src/app/tab2/tab2.page.html" beforeDir="false" afterPath="$PROJECT_DIR$/twitter/src/app/tab2/tab2.page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/twitter/src/app/tab2/tab2.page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/twitter/src/app/tab2/tab2.page.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/twitter/src/app/tab3/tab3.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/twitter/src/app/tab3/tab3.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/twitter/src/app/tab3/tab3.page.html" beforeDir="false" afterPath="$PROJECT_DIR$/twitter/src/app/tab3/tab3.page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/twitter/src/app/tab3/tab3.page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/twitter/src/app/tab3/tab3.page.ts" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -23,7 +26,7 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -31,7 +34,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="ts.external.directory.path" value="$PROJECT_DIR$/comida/node_modules/typescript/lib" />
+    <property name="ts.external.directory.path" value="C:\Users\erick\OneDrive\Documentos\GitHub\js-mora-garzon-erick-paul\04-ionic\twitter\node_modules\typescript\lib" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -65,6 +68,7 @@
       <workItem from="1578085700288" duration="5721000" />
       <workItem from="1578343502913" duration="196000" />
       <workItem from="1578343735057" duration="2380000" />
+      <workItem from="1579219222584" duration="817000" />
     </task>
     <servers />
   </component>

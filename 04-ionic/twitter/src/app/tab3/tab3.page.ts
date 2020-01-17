@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {HttpClient} from "@angular/common/http";
 
 @Component({
   selector: 'app-tab3',
@@ -7,6 +8,9 @@ import { Component } from '@angular/core';
 })
 export class Tab3Page {
 
+  url = 'http://localhost:1337'; //sails
+  arregloNotificaciones2 = [];
+/*
   arregloNotificaciones = [
     {
       perfil: 'https://pbs.twimg.com/profile_images/984857614247919616/V7z-khzu_400x400.jpg',
@@ -78,6 +82,47 @@ export class Tab3Page {
       texto: '#URGENTE | Se revoca la prisión preventiva de Paola Pabón, Virgilio Hernández y Christian González.\n' +
           'La presidenta subrogante de la Corte de Justicia de Pichincha, Patlova Guerra, dispuso este 24 de diciembre su libertad; deberán presentarse periódicamente ante la Justicia https://pic.twitter.com/9Nt7C1jM1I'
     }
-  ];
+  ];*/
+
+  constructor(
+      private readonly _httpClient: HttpClient
+  ){
+    //CASI NUNCA HACER CONFIGURACIONES
+  }
+
+
+
+  ngOnInit(): void {
+
+    const urlNotificaciones = this.url + '/notificacion'; //sails
+    // $ -> Observable
+
+    const notificaciones$ = this._httpClient.get(
+        urlNotificaciones
+    );
+
+    notificaciones$
+        .subscribe(
+            (notificaciones: any[])=>{ //TRY
+              console.log('Notificacion: ', notificaciones);
+              this.arregloNotificaciones2 = notificaciones
+            },
+            (error)=>{ // CATCH
+              console.error({
+                error: error,
+                mensaje: 'Error consultando notificaciones'
+              })
+            }
+
+
+        );
+
+  }
 
 }
+
+
+
+
+
+

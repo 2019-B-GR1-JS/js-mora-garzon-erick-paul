@@ -1,0 +1,240 @@
+POST-body-raw-json
+-----------------http://localhost:1337/tweet-------------------
+
+{
+    "perfil": "https://pbs.twimg.com/profile_images/984857614247919616/V7z-khzu_400x400.jpg",
+    "nombre": "El Comercio",
+    "usuario": "@elcomerciocom",
+    "tiempo": "1h",
+    "texto": "La década presenció un importante desarrollo de la inteligencia artificial, pero todavía está en debate si servirá para mejorar las condiciones de vida de la humanidad o si abrirá más brechas",
+    "imagen": "https://pbs.twimg.com/media/EM_A4GQXYAUOBTa?format=jpg&name=small",
+    "comentarios": 10,
+    "retweets": 5,
+    "gusta": 15
+}
+
+{
+    "perfil": "https://pbs.twimg.com/profile_images/1202307923243937793/5HkP2RTg_400x400.jpg",
+    "nombre": "Ecuavisa",
+    "usuario": "@ecuavisa",
+    "tiempo": "28 dic",
+    "texto": "¡IMPRESIONANTE! #Youtubers provocan una gigantesca explosión de espuma que inunda todo un patio en #EEUU.",
+    "imagen": "https://pbs.twimg.com/media/EM6FJMpXsAE4PbU?format=jpg&name=small",
+    "comentarios": 1,
+    "retweets": 11,
+    "gusta": 15
+}
+
+{
+    "perfil": "https://pbs.twimg.com/profile_images/1212398377553412096/HaWAuh90_400x400.jpg",
+    "nombre": "Pokemon",
+    "usuario": "@Pokemon",
+    "tiempo": "20 dic",
+    "texto": "So you’ve become the Champion of the Galar region—why not take on the entire world in Ranked Battles next? \n Learn how to raid, battle, and hatch your way to having a team worthy of the Master Ball Tier: \n http://bit.ly/35Gd4Bq", 
+    "imagen": "https://pbs.twimg.com/media/EMQV9CSWkAAwnrL?format=jpg&name=small",
+    "comentarios": 235,
+    "retweets": 425,
+    "gusta": 4000
+}
+
+{
+    "perfil": "https://pbs.twimg.com/profile_images/1185193609102057472/VgqVmDgX_400x400.jpg",
+    "nombre": "Cartoon Network",
+    "usuario": "@cartoonnetwork",
+    "tiempo": "23h",
+    "texto": "We wish you a beary merry holidays! Look for these adorable stickers on GIPHY by searching 'We Bare Bears' \n\n #WeBareBears", 
+    "imagen": "https://pbs.twimg.com/media/EMQV9CSWkAAwnrL?format=jpg&name=small",
+    "comentarios": 235,
+    "retweets": 425,
+    "gusta": 4000
+}
+
+{
+    "perfil": "https://pbs.twimg.com/profile_images/1185193609102057472/VgqVmDgX_400x400.jpg",
+    "nombre": "Cartoon Network",
+    "usuario": "@cartoonnetwork",
+    "tiempo": "23h",
+    "texto": "We wish you a beary merry holidays! Look for these adorable stickers on GIPHY by searching 'We Bare Bears' \n\n #WeBareBears", 
+    "imagen": "https://pbs.twimg.com/media/EMlln-AX0AEWEgK?format=jpg&name=360x360",
+    "comentarios": 100,
+    "retweets": 404,
+    "gusta": 1600
+}
+
+{
+    "perfil": "https://pbs.twimg.com/profile_images/1205226947346722817/veJLfnPs_400x400.jpg",
+    "nombre": "Elon Musk",
+    "usuario": "@elonmusk",
+    "tiempo": "2h",
+    "texto": "Dam now rly want choc chip muffin", 
+    "imagen": "https://pbs.twimg.com/media/EM_Q-JhXUAAeQYD?format=jpg&name=small",
+    "comentarios": 1500,
+    "retweets": 7100,
+    "gusta": 56300
+}
+
+{
+    "perfil": "https://pbs.twimg.com/profile_images/1073607078109949957/74oimLX4_400x400.jpg",
+    "nombre": "UEFA Champions League",
+    "usuario": "@ChampionsLeague",
+    "tiempo": "8h",
+    "texto": "First player you think of?", 
+    "imagen": "https://pbs.twimg.com/media/EL_jIR7XYAAnxJ8?format=jpg&name=small",
+    "comentarios": 156,
+    "retweets": 309,
+    "gusta": 7800
+}
+
+{
+    "perfil": "https://pbs.twimg.com/profile_images/1016849978642186240/_AbJ7V5b_400x400.jpg",
+    "nombre": "Walt Disney Studios",
+    "usuario": "@DisneyStudios",
+    "tiempo": "28 dic",
+    "texto": "See @StarWars\n #TheRiseOfSkywalker now playing in theaters! Get tickets: http://fandango.com/TheRiseOfSkywalker", 
+    "imagen": "https://pbs.twimg.com/media/EMsCcsbUcAAlP1C?format=jpg&name=small",
+    "comentarios": 298,
+    "retweets": 40,
+    "gusta": 460
+}
+
+{
+    "perfil": "https://pbs.twimg.com/profile_images/1200525230239879168/Kb3JplK5_400x400.jpg",
+    "nombre": "Nickelodeon",
+    "usuario": "@Nickelodeon",
+    "tiempo": "25 dic",
+    "texto": "merry christmas from the bikini bottom of our hearts", 
+    "imagen": "https://pbs.twimg.com/media/EMprAkjXsAISEWX?format=jpg&name=small",
+    "comentarios": 14,
+    "retweets": 164,
+    "gusta": 759
+}
+
+
+-------------------------------http://localhost:1337/tendencia--------------------------------------
+
+
+{
+    "numero": "1 - Tendencias globales",
+    "tema": "QUESTIONARIO PARA 2020",
+    "tweets": "20,9 mil Tweets"	
+}
+
+{
+    "numero": "2 - Tendencias globales",
+    "tema": "#LIVSHU",
+    "tweets": "50,2 mil Tweets"	
+}
+
+{
+    "numero": "3 - Tendencias globales",
+    "tema": "#SelenialsRare",
+    "tweets": "54,9 mil Tweets"	
+}
+
+{
+    "numero": "4 - Tendencias globales",
+    "tema": "#Dracula",
+    "tweets": "24,8 mil Tweets"	
+}
+
+{
+    "numero": "5 - Tendencias globales",
+    "tema": "Revilla",
+    "tweets": "22,4 mil Tweets"	
+}
+
+{
+    "numero": "6 - Tendencias globales",
+    "tema": "Teruel",
+    "tweets": "22 mil Tweets"	
+}
+
+{
+    "numero": "7 - Tendencias globales",
+    "tema": "#MasterChefIt",
+    "tweets": "5,850 Tweets"	
+}
+
+{
+    "numero": "8 - Tendencias globales",
+    "tema": "#YummyOutTONIGHT",
+    "tweets": "124 mil Tweets"	
+}
+
+{
+    "numero": "9 - Tendencias globales",
+    "tema": "Sam Wyche",
+    "tweets": "7,443 Tweets"	
+}
+
+{
+    "numero": "10 - Tendencias globales",
+    "tema": "Rooney",
+    "tweets": "22,6 mil Tweets"	
+}
+
+
+---------------------------------http://localhost:1337/notificacion--------------------------
+
+
+{
+    "perfil": "https://pbs.twimg.com/profile_images/984857614247919616/V7z-khzu_400x400.jpg",
+    "tipo": "Tweet reciente",
+    "texto": "#VIDEO | Luto en ‘Friends’ por muerte de Allee Willis » http://bit.ly/MureFrinds"
+}
+
+{
+    "perfil": "https://pbs.twimg.com/profile_images/1205650147352416256/mRSusjRN_400x400.jpg",
+    "tipo": "Recomendaciones para ti",
+    "texto": "Los “piropos” no son inofensivos\n\n Es más grave si viene de un agente estatal\n\n A toda la \n @PoliciaEcuador\n le será recordado que este comportamiento es inaceptable. Si queremos sociedades más seguras ¡debemos luchar contra todas las violencias!\n\n Mil disculpas \n @caathytorres"
+}
+
+{
+    "perfil": "https://pbs.twimg.com/profile_images/1184815382475038720/xoPGKybX_400x400.jpg",
+    "tipo": "Recomendaciones para ti",
+    "texto": "No habrá Nochebuena si falta un padre, una madre o hijos, por haber sido asesinados por el gobierno de facto de Áñez. No habrá paz ni amor mientras no retorne la libertad y democracia, ni Navidad con asilados y perseguidos. Un abrazo a las familias de nuestra Patria."
+}
+
+{
+    "perfil": "https://pbs.twimg.com/profile_images/1155596106895675395/lS0psRtd_400x400.jpg",
+    "tipo": "Recomendaciones para ti",
+    "texto": "Sobre los jugadores ecuatorianos de cada década, salvo mejores criterios, me permitiría clasificarlos asi:\n Los 60: A. Spencer\n Los 70: Ítalo Estupiñán\n Los 80: Holger Quiñonez\n Los 90: Alex Aguinaga\n Los 2000: Edison Méndez\n Los 2010: Antonio Valencia."
+}
+
+{
+    "perfil": "https://pbs.twimg.com/profile_images/1182993647740030976/g_5WmY5w_400x400.jpg",
+    "tipo": "",
+    "texto": "Sandra Sánchez - Kushi comenzó a seguir a Cristina Acuña Bermeo"
+}
+
+{
+    "perfil": "https://pbs.twimg.com/profile_images/984857614247919616/V7z-khzu_400x400.jpg",
+    "tipo": "Tweet reciente",
+    "texto": "#URGENTE | El Pleno de la Asamblea Nacional aprueba la Ley Tributaria con 83 votos » http://bit.ly/AprobLeyTributr https://pic.twitter.com/Up0vraJQav"
+}
+
+{
+    "perfil": "https://pbs.twimg.com/profile_images/1182993647740030976/g_5WmY5w_400x400.jpg",
+    "tipo": "Sandra Sánchez - Kushi\n indicó que le gustan 2 de tus Tweets",
+    "texto": "Las técnicas de pruebas de caja negra y de caja blanca requieren de la ejecución de código porque son pruebas de software dinámicas.\n @KushiRimay #SW_Quality_Security"
+}
+
+{
+    "perfil": "https://pbs.twimg.com/profile_images/1211261825179934720/6qEQqu6n_400x400.jpg",
+    "tipo": "",
+    "texto": "Myriam Hernández A. te siguió"
+}
+
+{
+    "perfil": "https://pbs.twimg.com/profile_images/1114903872449974274/FxAl7TTU_400x400.png",
+    "tipo": "Marco Silva-Ramos\n retwitteó tu Tweet",
+    "texto": "El enfoque PDCA consiste en un ciclo iterativo con el objetivo de la mejora continua de 4 etapas: Planificar-Hacer-Verificar-Actuar o Plan-Do-Check-Act por sus siglas en inglés. \n #SW_Quality_Security @KushiRimay"
+}
+
+{
+    "perfil": "https://pbs.twimg.com/profile_images/984857614247919616/V7z-khzu_400x400.jpg",
+    "tipo": "Tweet reciente",
+    "texto": "#URGENTE | Se revoca la prisión preventiva de Paola Pabón, Virgilio Hernández y Christian González.\n La presidenta subrogante de la Corte de Justicia de Pichincha, Patlova Guerra, dispuso este 24 de diciembre su libertad; deberán presentarse periódicamente ante la Justicia https://pic.twitter.com/9Nt7C1jM1I"
+}
+
+
