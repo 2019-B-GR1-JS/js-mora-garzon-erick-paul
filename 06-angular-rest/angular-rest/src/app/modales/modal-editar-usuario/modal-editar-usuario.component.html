@@ -1,0 +1,55 @@
+<h1 mat-dialog-title>
+  Editar usuario
+</h1>
+<div mat-dialog-content>
+  <form #formularioEditar="ngForm">
+    <div>
+      <label for="nombreId">
+        Nombre
+      </label>
+      <input id="nombreId"
+             type="text"
+              name="nombre"
+              [(ngModel)]="nombre">
+    </div>
+
+    <div>
+      <label for="apellidoId">
+        Apellido
+      </label>
+      <input id="apellidoId"
+             type="text"
+             name="apellido"
+             [(ngModel)]="apellido">
+    </div>
+
+    <div>
+      <label for="correoId">
+        Correo
+      </label>
+      <input id="correoId"
+             type="text"
+             name="correo"
+             [(ngModel)]="correo">
+    </div>
+
+    <div>
+      <label for="passwordId">
+        Password
+      </label>
+      <input id="passwordId"
+             type="text"
+             name="password"
+             [(ngModel)]="password">
+    </div>
+
+  </form>
+</div>
+<div mat-dialog-actions>
+  <p-button label = "Cancelar"
+            styleClass="ui-button-secondary"
+            (onClick)="cancelar()"></p-button>
+  <p-button label = "Aceptar"
+            styleClass="ui-button-success"
+            (onClick)="aceptar()"></p-button>
+</div>

@@ -12,11 +12,19 @@ import {InputTextModule} from 'primeng/inputtext';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from "@angular/material/form-field";
+import { ModalEditarUsuarioComponent } from './modales/modal-editar-usuario/modal-editar-usuario.component';
+import {MatDialogModule} from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ModalEditarUsuarioComponent
   ],
+
+  entryComponents:[
+    ModalEditarUsuarioComponent
+  ],
+
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -27,6 +35,7 @@ import {MatFormFieldModule} from "@angular/material/form-field";
     InputTextModule,
     BrowserAnimationsModule,
     MatFormFieldModule,
+    MatDialogModule
     // -> HTTP
   ],
   providers: [
