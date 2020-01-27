@@ -74,6 +74,15 @@
         <p-button label="ELIMINAR" (click)="eliminar(usuario)">
 
         </p-button>
+        <a [routerLink]="[
+        '/inicio',
+        'gestion-usuarios',
+        usuario.id,
+        'gestion-libros',
+        'buscar']">
+          <p-button label="Gestionar Libros"></p-button>
+        </a>
+
       </td> <!-- table detail -->
     </tr>
   </ng-template>
