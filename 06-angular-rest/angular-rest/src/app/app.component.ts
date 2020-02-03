@@ -5,6 +5,7 @@ import { FILAS } from './constantes/numero-filas-por-tabla';
 import {MatDialog} from "@angular/material/dialog";
 import {ModalEditarUsuarioComponent} from "./modales/modal-editar-usuario/modal-editar-usuario.component";
 import {UsuarioRestService} from "./services/rest/usuario-rest.service";
+import {AuthService} from "./services/auth/auth.service";
 
 @Component({
   selector: 'app-root',
@@ -12,7 +13,7 @@ import {UsuarioRestService} from "./services/rest/usuario-rest.service";
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  constructor() {
+  constructor(private readonly _authService:AuthService) {
   }
 
   ngOnInit() {

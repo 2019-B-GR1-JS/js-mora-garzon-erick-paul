@@ -11,6 +11,7 @@ export class ModalEditarUsuarioComponent implements OnInit {
   apellido = "";
   correo = "";
   password = "";
+  rol = "";
 
   constructor(
     public dialogRef: MatDialogRef<ModalEditarUsuarioComponent>,
@@ -26,6 +27,7 @@ export class ModalEditarUsuarioComponent implements OnInit {
     this.apellido = this.data.usuario.apellido;
     this.correo = this.data.usuario.correo;
     this.password = this.data.usuario.password;
+    this.rol = this.data.usuario.rol;
 
   }
 
@@ -38,7 +40,8 @@ export class ModalEditarUsuarioComponent implements OnInit {
       nombre: this.nombre,
       apellido: this.apellido,
       correo: this.correo,
-      password: this.password
+      password: this.password,
+      rol: this.rol
     })
   }
 

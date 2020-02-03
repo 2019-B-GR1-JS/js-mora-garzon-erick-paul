@@ -22,6 +22,7 @@ import { RutaCrearLibroComponent } from './rutas/ruta-crear-libro/ruta-crear-lib
 import { RutaBuscarLibroComponent } from './rutas/ruta-buscar-libro/ruta-buscar-libro.component';
 import { RutaEditarLibroComponent } from './rutas/ruta-editar-libro/ruta-editar-libro.component';
 import {LibroRestService} from "./services/rest/libro-rest.service";
+import {AuthService} from "./services/auth/auth.service";
 
 @NgModule({
   declarations: [
@@ -55,7 +56,8 @@ import {LibroRestService} from "./services/rest/libro-rest.service";
   ],
   providers: [
     UsuarioRestService,
-    LibroRestService
+    LibroRestService,
+    AuthService
   ],
   bootstrap: [AppComponent]
 })
