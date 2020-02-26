@@ -1,0 +1,12 @@
+
+<div *ngIf="pisoAActualizar">
+
+  <app-modal-editar-piso
+
+    [nombre]="pisoAActualizar.nombrePiso"
+    [nombreBoton]="'Actualizar'"
+    (formularioValido)="actualizarPiso($event)"
+  >
+  </app-modal-editar-piso>
+
+</div>

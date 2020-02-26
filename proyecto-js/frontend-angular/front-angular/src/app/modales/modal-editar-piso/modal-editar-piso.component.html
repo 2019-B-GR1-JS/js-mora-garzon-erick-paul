@@ -1,1 +1,56 @@
-<p>modal-editar-piso works!</p>
+<h1 mat-dialog-title>
+  Editar piso
+</h1>
+
+<div mat-dialog-content>
+<form #formularioEditarPiso="ngForm"
+      novalidate
+      (submit)="emitirFormularioValido()"
+>
+
+  <div>
+
+    <p *ngIf="inputNivel.errors">
+
+      <p-message
+        *ngIf="inputNivel.errors.required"
+        severity="warn"
+        text="Error: El nivel es requerido"></p-message>
+
+    </p>
+
+  </div>
+
+  <div class="ui-inputgroup">
+
+    <label [hidden]="true"
+           for="nombrePiso">Nivel del Piso</label>
+
+    <input id="nombrePiso"
+
+           pInputText
+           placeholder="Nivel del Piso"
+           required
+           type="string"
+           name="nombrePiso"
+           [(ngModel)]="nombrePiso"
+           #inputNivel="ngModel"
+    >
+  </div>
+
+  <div class="ui-inputgroup">
+
+
+  </div>
+
+</form>
+</div>
+
+<div mat-dialog-actions>
+  <p-button label = "Cancelar"
+            styleClass="ui-button-secondary"
+            (onClick)="cancelar()"></p-button>
+  <p-button label = "Aceptar"
+            styleClass="ui-button-success"
+            (onClick)="aceptar()"></p-button>
+</div>

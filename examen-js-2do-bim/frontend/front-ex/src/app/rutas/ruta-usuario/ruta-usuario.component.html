@@ -1,0 +1,57 @@
+<br>
+<h1>Compras</h1>
+
+
+<p> </p>
+
+<p-button styleClass="ui-button-warning" label="Salir" (onClick)="salir()"></p-button>
+<p></p>
+<span class="ui-float-label">
+  <input id="float-input"
+         size="30"
+         type="text"
+         placeholder="Buscar por fecha de compra"
+         name="fecha"
+         [(ngModel)]="busquedaFecha"
+         pInputText
+         >
+  <label for="float-input"></label>
+  <p-button label="Buscar" (onClick)="buscarPorFecha()"></p-button>
+</span>
+<br>
+<p-button label="Nueva Compra" styleClass="ui-button-success"
+          (onClick)="abrirCompra()"></p-button>
+<br>
+<br>
+<p-table [value]="compras"
+         [paginator]="true"
+         [rows]="filas">
+  <ng-template pTemplate="caption">
+    Lista de Compras de {{nombre}} {{apellido}}
+  </ng-template>
+  <ng-template pTemplate="header">
+    <tr>
+      <th>Id</th>
+      <th>Estado</th>
+      <th>Fecha</th>
+      <th>Total</th>
+      <th>Acciones</th>
+    </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-compra>
+    <tr>
+      <td>{{compra.id}}</td>
+      <td>{{compra.estado}}</td>
+      <td>{{compra.fecha}}</td>
+      <td>{{compra.total | currency}}</td>
+      <td>
+        <p-button label="Visualizar Compra"   styleClass="ui-button-primary"
+                  (onClick)="visualizarCompra(compra)"></p-button>
+      </td>
+    </tr>
+  </ng-template>
+</p-table>
+<br>
+<router-outlet></router-outlet>
+
+

@@ -1,0 +1,16 @@
+<router-outlet></router-outlet><div class="container">
+
+  <div class="toppane">
+    <h1>Aplicación Paciente-medicamento</h1>
+  </div>
+
+  <div class="leftpane">
+    <p-panelMenu [model]="items" [style]="{'width':'315px'}"></p-panelMenu>
+  </div>
+
+  <div class="middlepane">
+    <router-outlet></router-outlet>
+  </div>
+
+
+</div>

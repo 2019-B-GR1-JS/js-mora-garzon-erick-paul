@@ -1,0 +1,32 @@
+<h1 mat-dialog-title>
+  Factura: {{idCabecera}}
+  <h2> Compra de {{_authService.sesion.nombre}} el
+    {{fecha | date: 'dd/MM/yyyy'}}</h2>
+  <h2> Total: {{total | currency}} </h2>
+</h1>
+<div mat-dialog-content>
+  <p-table [value]="detalle"
+           [paginator]="true"
+           [rows]="5">
+    <ng-template pTemplate="header">
+      <tr>
+        <th>Medicamento</th>
+        <th>Precio</th>
+        <th>Cantidad</th>
+        <th>Subtotal</th>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-detalle let-rowIndex="rowIndex">
+      <tr>
+        <td>{{detalle.idMedicamento.nombre}}</td>
+        <td>{{detalle.precio | currency}}</td>
+        <td>{{detalle.cantidad}}</td>
+        <td>{{detalle.subtotal | currency}}</td>
+      </tr>
+    </ng-template>
+  </p-table>
+</div>
+<div mat-dialog-actions>
+  <p-button label="Salir" styleClass="ui-button-secondary"
+            (onClick)="salir()"></p-button>
+</div>

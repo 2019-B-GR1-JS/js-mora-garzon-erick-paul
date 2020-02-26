@@ -1,1 +1,7 @@
-<p>ruta-crear-piso works!</p>
+<h2>Registrar piso</h2>
+
+<app-modal-crear-piso
+  [nombreBoton]="'Registrar'"
+  (formularioValido)="crearPiso($event)"
+>
+</app-modal-crear-piso>

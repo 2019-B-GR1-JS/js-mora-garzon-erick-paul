@@ -1,0 +1,161 @@
+<h1 mat-dialog-title *ngIf="data.medicamento">Editar medicamento</h1>
+<h1 mat-dialog-title *ngIf="crear">Crear medicamento</h1>
+
+<div mat-dialog-content>
+  <form #formularioEditar="ngForm" >
+    <div>
+      <label for="numeroId">Numero: </label>
+      <input id="numeroId"
+             type="number"
+             name="numero"
+             placeholder="{{numero}}"
+             required
+             title="Numero de medicamento"
+             min="0"
+             max="1000"
+             [(ngModel)]="numero"
+             #numeroId = 'ngModel'>
+    </div>
+    <div *ngIf="numeroId.touched && numeroId.dirty && numeroId.errors">
+      <p *ngIf="numeroId.errors.required ">
+        Este campo es requerido.
+    </div>
+    <br>
+    <div>
+      <label for="nombreId">Nombre: </label>
+      <input id="nombreId"
+             type="text"
+             name="nombre"
+             required
+             title="Nombre del medicamento"
+             minlength="3"
+             maxlength="30"
+             placeholder="{{nombre}}"
+             #nombreInput ="ngModel"
+             [(ngModel)]="nombre">
+    </div>
+    <div *ngIf="nombreInput.touched && nombreInput.dirty && nombreInput.errors">
+      <p *ngIf="nombreInput.errors.required ">
+        Este campo es requerido.
+      </p>
+      <p *ngIf="nombreInput.errors.minlength ">
+        llenar con un minimo de 3 caracteres
+      </p>
+      <p *ngIf="nombreInput.errors.maxlength ">
+        Llenar con un maximo de 30 caracteres
+      </p>
+    </div>
+    <br>
+    <div>
+      <label for="composicionId">Composicion: </label>
+      <input id="composicionId"
+             type="text"
+             name="composicion"
+             required
+             title="Compouestos del medicamento"
+             minlength="3"
+             maxlength="100"
+             placeholder="{{composicion}}"
+             #composicionInput ="ngModel"
+             [(ngModel)]="composicion">
+    </div>
+    <div *ngIf="composicionInput.touched && composicionInput.dirty && composicionInput.errors">
+      <p *ngIf="composicionInput.errors.required ">
+        Este campo es requerido.
+      </p>
+      <p *ngIf="nombreInput.errors.minlength ">
+        llenar con un minimo de 3 caracteres
+      </p>
+      <p *ngIf="nombreInput.errors.maxlength ">
+        Llenar con un maximo de 100 caracteres
+      </p>
+    </div>
+    <br>
+    <div>
+      <label for="usoId">Uso: </label>
+      <input id="usoId"
+             type="text"
+             name="poderDos"
+             required
+             title="Uso del medicamento"
+             minlength="3"
+             maxlength="100"
+             placeholder="{{uso}}"
+             #usoInput ="ngModel"
+             [(ngModel)]="uso">
+    </div>
+    <div *ngIf="usoInput.touched && usoInput.dirty && usoInput.errors">
+      <p *ngIf="usoInput.errors.required ">
+        Este campo es requerido.
+      </p>
+      <p *ngIf="nombreInput.errors.minlength ">
+        llenar con un minimo de 3 caracteres
+      </p>
+      <p *ngIf="nombreInput.errors.maxlength ">
+        Llenar con un maximo de 100 caracteres
+      </p>
+    </div>
+    <br>
+    <div>
+      <label for="fechaCaducidadId">Fecha caducidad: </label>
+      <input id="fechaCaducidadId"
+             type="text"
+             name="fechaCaducidad"
+             required
+             placeholder="{{fechaCaducidad}}"
+             [(ngModel)]="fechaCaducidad"
+             #fechaCaducidadInput = "ngModel"
+             >
+    </div>
+    <div *ngIf="fechaCaducidadInput.touched && fechaCaducidadInput.dirty && fechaCaducidadInput.errors">
+      <p *ngIf="fechaCaducidadInput.errors.required ">
+        Este campo es requerido.
+      </p>
+    </div>
+    <br>
+    <div>
+      <label for="numeroPastillasId">Numero de pastillas: </label>
+      <input id="numeroPastillasId"
+             type="number"
+             name="numeroPastillas"
+             placeholder="{{numeroPastillas}}"
+             required
+             title="Numero de pastillas del medicamento"
+             min="0"
+             max="100"
+             [(ngModel)]="numeroPastillas"
+             #numeroPastillasInput = 'ngModel'>
+    </div>
+    <div *ngIf="numeroPastillasInput.touched && numeroPastillasInput.dirty && numeroPastillasInput.errors">
+      <p *ngIf="numeroPastillasInput.errors.required ">
+        Este campo es requerido.
+    </div>
+
+    <br>
+    <div>
+      <label for="precioId">Precio: </label>
+      <input id="precioId"
+             type="number"
+             name="precio"
+             placeholder="{{precio | currency}}"
+             required
+             title="Precio del medicamento"
+             min="0"
+             max="200"
+             [(ngModel)]="precio"
+             #precioId = 'ngModel'>
+    </div>
+    <div *ngIf="precioId.touched && precioId.dirty && precioId.errors">
+      <p *ngIf="precioId.errors.required ">
+        Este campo es requerido.
+    </div><br>
+  </form>
+</div>
+<div mat-dialog-actions>
+  <p-button label="Cancelar" styleClass="ui-button-secondary"
+            (onClick)="cancelar()"></p-button>
+  <p-button label="Aceptar" styleClass="ui-button-success"
+            (onClick)="aceptar()"
+            [disabled]="formularioEditar.invalid">
+  </p-button>
+</div>

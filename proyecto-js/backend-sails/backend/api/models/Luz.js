@@ -9,12 +9,20 @@ module.exports = {
 
   attributes: {
 
+    numLuz:{
+      type:'string',
+      required: true,
+      unique: true
+    },
+
     estado:{
-      type: 'string',
+      /*type: 'string',
       isIn:[
         'apagado',
         'encendido'
-      ]
+      ]*/
+      type: "boolean",
+      defaultsTo: false
     },
 
     idHabitacion: {

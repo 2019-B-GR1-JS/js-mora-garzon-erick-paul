@@ -1,0 +1,13 @@
+
+
+<div *ngIf="habitacionAActualizar">
+
+  <app-modal-editar-habitacion
+
+    [nombreHabitacion]="habitacionAActualizar.numHabitacion"
+    [nombreBoton]="'Actualizar'"
+    (formularioValido)="actualizarHabitacion($event)"
+  >
+  </app-modal-editar-habitacion>
+
+</div>

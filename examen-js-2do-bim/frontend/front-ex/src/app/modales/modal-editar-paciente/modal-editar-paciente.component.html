@@ -1,0 +1,103 @@
+<h1 mat-dialog-title *ngIf="data">Editar paciente</h1>
+<h1 mat-dialog-title *ngIf="crear">Crear paciente</h1>
+
+<div mat-dialog-content>
+  <form #formularioEditar="ngForm" >
+    <div>
+      <label for="nombreId">Nombre: </label>
+      <input id="nombreId"
+             type="text"
+             name="nombre"
+             required
+             title="Nombre paciente"
+             minlength="3"
+             maxlength="30"
+             placeholder="{{nombre}}"
+             #nombreInput ="ngModel"
+             [(ngModel)]="nombre">
+    </div>
+    <div *ngIf="nombreInput.touched && nombreInput.dirty && nombreInput.errors">
+      <p *ngIf="nombreInput.errors.required ">
+        Este campo es requerido.
+      </p>
+      <p *ngIf="nombreInput.errors.minlength ">
+        llenar con un minimo de 3 caracteres
+      </p>
+      <p *ngIf="nombreInput.errors.maxlength ">
+        Llenar con un maximo de 30 caracteres
+      </p>
+    </div>
+    <br>
+    <div>
+      <label for="apellidoId">Apellido: </label>
+      <input id="apellidoId"
+             type="text"
+             name="apellido"
+             required
+             placeholder="{{apellido}}"
+             title="Apellido del paciente"
+             minlength="3"
+             maxlength="30"
+             [(ngModel)]="apellido"
+             #apellidoI = "ngModel">
+    </div>
+    <div *ngIf="apellidoI.touched && apellidoI.dirty && apellidoI.errors">
+      <p *ngIf="apellidoI.errors.required ">
+        Este campo es requerido.
+      </p>
+      <p *ngIf="apellidoI.errors.minlength ">
+        llenar con un minimo de 3 caracteres
+      </p>
+      <p *ngIf="apellidoI.errors.maxlength ">
+        Llenar con un maximo de 30 caracteres
+      </p>
+    </div>
+    <br>
+    <div>
+      <label for="fechaNacimiento">Fecha de nacimiento: </label>
+      <input id="fechaNacimiento"
+             type="text"
+             required
+             placeholder="{{fechaNacimiento}}"
+             name="fechaNacimiento"
+             [(ngModel)]="fechaNacimiento"
+             #fechaI = "ngModel"
+
+      >
+    </div>
+    <div *ngIf="fechaI.touched && fechaI.dirty && fechaI.errors">
+      <p *ngIf="fechaI.errors.required ">
+        Este campo es requerido.
+      </p>
+    </div>
+    <br>
+    <div>
+      <label for="numeroHijosId">Numero de hijos: </label>
+      <input id="numeroHijosId"
+             type="number"
+             name="numeroHijos"
+             placeholder="{{numeroHijos}}"
+             required
+             title="Numero de hijos del paciente"
+             min="0"
+             max="20"
+             [(ngModel)]="numeroHijos"
+             #numeroHijosInput = 'ngModel'>
+    </div>
+    <div *ngIf="numeroHijosInput.touched && numeroHijosInput.dirty && numeroHijosInput.errors">
+      <p *ngIf="numeroHijosInput.errors.required ">
+        Este campo es requerido.
+    </div>
+
+    <br>
+  </form>
+</div>
+<div mat-dialog-actions>
+  <p-button label="Cancelar" styleClass="ui-button-secondary"
+            (onClick)="cancelar()"></p-button>
+  <p-button label="Aceptar" styleClass="ui-button-sucess"
+            (onClick)="aceptar()"
+            [disabled]="formularioEditar.invalid"
+  ></p-button>
+</div>
+

@@ -1,0 +1,209 @@
+<form #formularioResgistrarUsuario="ngForm"
+      novalidate
+      (submit)="emitirFormularioValido()"
+>
+
+  <div>
+
+    <p *ngIf="inputNombre.errors">
+
+      <p-message
+        *ngIf="inputNombre.errors.required"
+        severity="warn"
+        text="Error: El nombre es requerido"></p-message>
+
+    </p>
+
+    <p *ngIf="inputNombre.errors">
+
+      <p-message
+        *ngIf="inputNombre.errors.pattern"
+        severity="warn"
+        text="Error: El nombre debe contener solo letras."></p-message>
+
+    </p>
+
+    <p *ngIf="inputApellido.errors">
+
+      <p-message
+        *ngIf="inputApellido.errors.required"
+        severity="warn"
+        text="Error: El apellido es requerido"></p-message>
+
+    </p>
+
+    <p *ngIf="inputApellido.errors">
+
+      <p-message
+        *ngIf="inputApellido.errors.pattern"
+        severity="warn"
+        text="Error: El apellido debe contener solo letras"></p-message>
+
+    </p>
+
+    <p *ngIf="inputCedula.errors">
+
+      <p-message
+        *ngIf="inputCedula.errors.pattern"
+        severity="warn"
+        text="Error: El numero de cedula debe contener solo digitos"></p-message>
+
+    </p>
+
+    <p *ngIf="inputTelefono.errors">
+
+      <p-message
+        *ngIf="inputTelefono.errors.pattern"
+        severity="warn"
+        text="Error: El telefono debe contener solo digitos"></p-message>
+
+    </p>
+
+
+    <p *ngIf="inputCorreoElectronico.errors">
+
+      <p-message
+        *ngIf="inputCorreoElectronico.errors.required"
+        severity="warn"
+        text="Error: El correo electronico es requerido"></p-message>
+
+      <p-message
+        *ngIf="inputCorreoElectronico.errors.email"
+        severity="warn"
+        text="Error: Debe ingresar un correo valido"></p-message>
+
+    </p>
+
+
+    <p *ngIf="inputPassword.errors">
+
+      <p-message
+        *ngIf="inputPassword.errors.required"
+        severity="warn"
+        text="Error: La contraseña es requerida"></p-message>
+
+
+    </p>
+
+
+  </div>
+
+  <div class="ui-inputgroup">
+
+    <label [hidden]="true"
+           for="nombre">Nombre</label>
+
+    <input id="nombre"
+           pInputText
+           placeholder="Nombre"
+           required
+           pattern="[A-Za-z]{1,15}"
+           type="text"
+           name="nombre"
+           [(ngModel)]="nombreUsuario"
+           #inputNombre="ngModel"
+    >
+  </div>
+
+
+  <div>
+
+    <label [hidden]="true"
+           for="apellido">Apellido </label>
+
+
+    <input id="apellido"
+           pInputText
+           placeholder="Apellido"
+           required
+           pattern="[A-Za-z]{1,15}"
+           type="text"
+           name="apellido"
+           [(ngModel)]="apellido"
+           #inputApellido="ngModel"
+    >
+  </div>
+
+  <div>
+
+    <label [hidden]="true"
+           for="numCedula">Numero cedula </label>
+
+
+    <input id="numCedula"
+           pInputText
+           placeholder="Numero cedula"
+           required
+           pattern="[0-9]{1,15}"
+           type="text"
+           name="numCedula"
+           [(ngModel)]="numCedula"
+           #inputCedula="ngModel"
+    >
+  </div>
+
+  <div>
+
+    <label [hidden]="true"
+           for="telefono">Telefono </label>
+
+
+    <input id="telefono"
+           pInputText
+           placeholder="Telefono"
+           required
+           pattern="[0-9]{1,15}"
+           type="text"
+           name="telefono"
+           [(ngModel)]="telefono"
+           #inputTelefono="ngModel"
+    >
+  </div>
+
+
+  <div>
+
+    <label [hidden]="true"
+           for="password"> Contraseña </label>
+
+
+    <input id="password"
+           pInputText
+           placeholder="Contraseña"
+           required
+           type="password"
+           name="password"
+           [(ngModel)]="password"
+           #inputPassword="ngModel"
+    >
+  </div>
+
+
+
+
+  <div>
+
+    <label [hidden]="true"
+           for="correoElectronico">Correo Electronico</label>
+
+    <input id="correoElectronico"
+           pInputText
+           placeholder="Correo Electronico"
+           required
+           email
+           type="email"
+           name="correoElectronico"
+           [(ngModel)]="correo"
+           #inputCorreoElectronico="ngModel"
+    >
+  </div>
+
+
+  <p-button
+    label="Registrar"
+    [disabled]="formularioResgistrarUsuario.invalid">
+  </p-button
+  >
+
+
+</form>

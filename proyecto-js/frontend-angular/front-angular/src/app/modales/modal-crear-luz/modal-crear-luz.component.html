@@ -1,0 +1,96 @@
+<form #formularioResgistrarLuz="ngForm"
+      novalidate
+      (submit)="emitirFormularioValido()"
+>
+
+  <div>
+
+    <p *ngIf="inputNombre.errors">
+
+      <p-message
+        *ngIf="inputNombre.errors.required"
+        severity="warn"
+        text="Error: El numero es requerido"></p-message>
+
+    </p>
+
+
+
+    <p *ngIf="inputEstado.errors">
+
+      <p-message
+        *ngIf="inputEstado.errors.required"
+        severity="warn"
+        text="Error: El estado es requerido"></p-message>
+
+    </p>
+
+
+    <p *ngIf="inputIdHabitacion.errors">
+
+      <p-message
+        *ngIf="inputIdHabitacion.errors.required"
+        severity="warn"
+        text="Error: La habitacion es requerida"></p-message>
+
+    </p>
+
+  </div>
+
+  <div class="ui-inputgroup">
+
+    <label [hidden]="true"
+           for="numLuz">Numero luz</label>
+
+    <input id="numLuz"
+           pInputText
+           placeholder="Numero luz"
+           required
+           type="text"
+           name="numLuz"
+           [(ngModel)]="numLuz"
+           #inputNombre="ngModel"
+    >
+  </div>
+
+
+  <div>
+
+    <label [hidden]="true"
+           for="estado">Estado </label>
+
+
+    <input id="estado"
+           pInputText
+           placeholder="Estado"
+           required
+           type="text"
+           name="estado"
+           [(ngModel)]="estado"
+           #inputEstado="ngModel"
+    >
+  </div>
+
+  <div>
+
+    <label [hidden]="true"
+           for="idHabitacion">Habitacion </label>
+
+
+    <input id="idHabitacion"
+           pInputText
+           placeholder="Habitacion"
+           required
+           type="text"
+           name="idHabitacion"
+           [(ngModel)]="idHabitacion"
+           #inputIdHabitacion="ngModel"
+    >
+  </div>
+
+  <p-button
+    label="Registrar"
+    [disabled]="formularioResgistrarLuz.invalid">
+  </p-button
+  >
+</form>

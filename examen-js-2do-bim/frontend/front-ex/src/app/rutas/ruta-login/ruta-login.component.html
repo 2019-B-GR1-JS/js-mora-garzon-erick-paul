@@ -1,0 +1,63 @@
+<br><br><br>
+<div class="ui-g">
+  <div class="ui-g-4" >
+  </div>
+  <div class="ui-g-4" >
+    <p-card header="Login">
+      <form #loginFormulario="ngForm">
+        <div>
+          <label for="correoId">
+            Correo:
+          </label>
+          <input id="correoId"
+                 email="true"
+                 name="correo"
+                 required
+                 title="Ingresar correo"
+                 [(ngModel)]="correo"
+                 #correoInput = "ngModel"
+          >
+        </div>
+        <div *ngIf="correoInput.touched && correoInput.dirty && correoInput.errors">
+          <p *ngIf="correoInput.errors.required ">
+            Este campo es requerido.
+          </p>
+        </div>
+        <br>
+        <div>
+          <label for="passwordId">
+            Password:
+          </label>
+
+          <input id="passwordId"
+                 type="password"
+                 name="password"
+                 required
+                 [(ngModel)]="password"
+                 #passwordI = "ngModel"
+          >
+        </div>
+        <div *ngIf="passwordI.touched && passwordI.dirty && passwordI.errors">
+          <p *ngIf="passwordI.errors.required ">
+            Este campo es requerido.
+          </p>
+        </div>
+        <br>
+        <div class="ui-g">
+          <div class="ui-g-5">
+            <p-button label="Iniciar sesion"  styleClass="ui-button-primary"
+                      [disabled]="loginFormulario.invalid"
+                      (onClick)="login()"></p-button>
+          </div>
+          <div class="ui-g-5">
+            <p-button label="Registrarse"  styleClass="ui-button-primary"
+                      (onClick)="registrar()"></p-button>
+          </div>
+
+        </div>
+      </form>
+    </p-card>
+    <div class="ui-g-4"></div>
+  </div>
+</div>
+<router-outlet></router-outlet>

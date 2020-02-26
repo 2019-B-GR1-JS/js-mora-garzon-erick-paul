@@ -1,0 +1,98 @@
+<form #formularioResgistrarHabitacion="ngForm"
+      novalidate
+      (submit)="emitirFormularioValido()"
+>
+
+  <div>
+
+    <p *ngIf="inputNombre.errors">
+
+      <p-message
+        *ngIf="inputNombre.errors.required"
+        severity="warn"
+        text="Error: El numero es requerido"></p-message>
+
+    </p>
+
+
+
+    <p *ngIf="inputEstado.errors">
+
+      <p-message
+        *ngIf="inputEstado.errors.required"
+        severity="warn"
+        text="Error: El estado es requerido"></p-message>
+
+    </p>
+
+
+    <p *ngIf="inputTipoHabitacion.errors">
+
+      <p-message
+        *ngIf="inputTipoHabitacion.errors.required"
+        severity="warn"
+        text="Error: El tipo de habitacion es requerido"></p-message>
+
+    </p>
+
+  </div>
+
+  <div class="ui-inputgroup">
+
+    <label [hidden]="true"
+           for="numHabitacion">Numero habitacion</label>
+
+    <input id="numHabitacion"
+           pInputText
+           placeholder="Numero habitacion"
+           required
+           type="text"
+           name="numHabitacion"
+           [(ngModel)]="numHabitacion"
+           #inputNombre="ngModel"
+    >
+  </div>
+
+
+  <div>
+
+    <label [hidden]="true"
+           for="estado">Estado </label>
+
+
+    <input id="estado"
+           pInputText
+           placeholder="Estado"
+           required
+           type="text"
+           name="estado"
+           [(ngModel)]="estado"
+           #inputEstado="ngModel"
+    >
+  </div>
+
+  <div>
+
+    <label [hidden]="true"
+           for="tipoHabitacion">Tipo habitacion </label>
+
+
+    <input id="tipoHabitacion"
+           pInputText
+           placeholder="Tipo habitacion"
+           required
+           type="text"
+           name="tipoHabitacion"
+           [(ngModel)]="tipoHabitacion"
+           #inputTipoHabitacion="ngModel"
+    >
+  </div>
+
+
+  <p-button
+    label="Registrar"
+    [disabled]="formularioResgistrarHabitacion.invalid">
+  </p-button
+  >
+
+</form>

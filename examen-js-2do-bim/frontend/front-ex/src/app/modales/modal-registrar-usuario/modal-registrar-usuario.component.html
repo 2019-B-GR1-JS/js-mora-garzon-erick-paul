@@ -1,0 +1,137 @@
+<h1 mat-dialog-title>Crear usuario</h1>
+
+<form #usuarioFormulario ="ngForm">
+  <div mat-dialog-content>
+
+        <label for="nombreId">
+          Nombre:
+        </label>
+        <input id="nombreId"
+               type="text"
+               name="nombre"
+               required
+               placeholder="Nombre"
+               title="Nombre del usuario"
+               minlength="3"
+               maxlength="30"
+               [(ngModel)]="nombre"
+               #nombreInput ="ngModel"
+               >
+
+      <div *ngIf="nombreInput.touched && nombreInput.dirty && nombreInput.errors">
+        <p *ngIf="nombreInput.errors.required ">
+          Este campo es requerido.
+        </p>
+        <p *ngIf="nombreInput.errors.minlength ">
+          llenar con un minimo de 3 caracteres
+        </p>
+        <p *ngIf="nombreInput.errors.maxlength ">
+          Llenar con un maximo de 30 caracteres
+        </p>
+      </div>
+<div>
+  <br>
+        <label for="apellidoId">
+          Apellido:
+        </label>
+        <input id="apellidoId"
+               type="text"
+               name="apellido"
+               required
+               placeholder="Apellido"
+               title="Apellido del usuario"
+               minlength="3"
+               maxlength="30"
+               [(ngModel)]="apellido"
+               #apellidoI = "ngModel"
+               >
+</div>
+      <div *ngIf="apellidoI.touched && apellidoI.dirty && apellidoI.errors">
+        <p *ngIf="apellidoI.errors.required ">
+          Este campo es requerido.
+        </p>
+        <p *ngIf="apellidoI.errors.minlength ">
+          llenar con un minimo de 3 caracteres
+        </p>
+        <p *ngIf="apellidoI.errors.maxlength ">
+          Llenar con un maximo de 30 caracteres
+        </p>
+      </div>
+
+    <br>
+<div>
+        <label for="correoId">
+          Correo:
+        </label>
+        <input id="correoId"
+               type="text"
+               name="correo"
+               email="true"
+               required
+               placeholder="Correo"
+               title="Correo del usuario"
+               [(ngModel)]="correo"
+               #correoI = "ngModel"
+               >
+</div>
+      <div *ngIf="correoI.touched && correoI.dirty && correoI.errors">
+        <p *ngIf="correoI.errors.required ">
+          Este campo es requerido.
+        </p>
+      </div>
+
+
+    <br>
+<div>
+        <label for="passwordId">
+          Password:
+        </label>
+        <input id="passwordId"
+               type="password"
+               name="password"
+               required
+               placeholder="Password"
+               title="Password"
+               [(ngModel)]="password"
+               #passwordInput = "ngModel"
+               >
+</div>
+    <br>
+    <div>
+        <label for="passwordConfId">
+          Confirmar Password:
+        </label>
+        <input id="passwordConfId"
+               type="password"
+               name="password"
+               required
+               placeholder="Password"
+               title="Confirmacion de password"
+               [(ngModel)]="passwordConfirmacion"
+               #passwordConfirmacionInput = "ngModel"
+               >
+    </div>
+      <div *ngIf="passwordInput.touched && passwordInput.dirty &&
+        passwordConfirmacionInput.touched && passwordConfirmacionInput.dirty">
+        <p *ngIf="validarPasswordsIguales()">
+          Las passwords no coinciden.
+        </p>
+      </div>
+      <br>
+
+  </div>
+  <div mat-dialog-actions>
+
+      <p-button label="Cancelar" styleClass="ui-button-secondary"
+                (onClick)="cancelar()"></p-button>
+
+
+      <p-button label="Registrar" styleClass="ui-button-sucess"
+                (onClick)="registrar()" [disabled]="validarPasswordsIguales() ||
+                            (usuarioFormulario.valid && password === '' ||
+                             usuarioFormulario.invalid)"></p-button>
+
+
+  </div>
+
+</form>

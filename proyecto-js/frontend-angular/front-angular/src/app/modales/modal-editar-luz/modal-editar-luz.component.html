@@ -1,1 +1,51 @@
-<p>modal-editar-luz works!</p>
+<h1 mat-dialog-title *ngIf="data.luz">Editar luz</h1>
+<h1 mat-dialog-title *ngIf="crear">Crear luz</h1>
+
+<div mat-dialog-content>
+  <form #formularioEditar="ngForm">
+    <div>
+      <label for="numeroId">
+        Numero
+      </label>
+      <input id="numeroId"
+             type="text"
+             name="numLuz"
+             required
+             [(ngModel)]="numLuz">
+    </div>
+
+    <div>
+      <label for="estadoId">
+        Estado
+      </label>
+      <input id="estadoId"
+             type="text"
+             ng-init="estado='false'"
+             value="false"
+             name="estado"
+             [(ngModel)]="estado">
+    </div>
+
+    <div>
+      <label for="idHabitacionId">
+        Habitacion
+      </label>
+      <input id="idHabitacionId"
+             type="text"
+             name="idHabitacion"
+             required
+             disabled
+             [(ngModel)]="idHabitacion">
+    </div>
+
+  </form>
+</div>
+<div mat-dialog-actions>
+  <p-button label = "Cancelar"
+            styleClass="ui-button-secondary"
+            (onClick)="cancelar()"></p-button>
+  <p-button label = "Aceptar"
+            styleClass="ui-button-success"
+            (onClick)="aceptar()"></p-button>
+</div>
+

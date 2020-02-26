@@ -1,0 +1,13 @@
+
+
+<div *ngIf="luzAActualizar">
+
+  <app-modal-editar-luz
+
+    [nombreLuz]="luzAActualizar.numLuz"
+    [nombreBoton]="'Actualizar'"
+    (formularioValido)="luzAActualizar($event)"
+  >
+  </app-modal-editar-luz>
+
+</div>

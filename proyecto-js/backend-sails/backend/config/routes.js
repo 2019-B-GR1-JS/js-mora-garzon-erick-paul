@@ -20,6 +20,14 @@ module.exports.routes = {
   ***************************************************************************/
 
   '/': { view: 'pages/homepage' },
+  //'post /login': {action: 'Usuario/login'},
+  'GET /luz/accionarLuz/:id/':{
+    action: 'luz/accionarLuz'
+  },
+  'GET /luz/apagarLuz/:id/':{
+    action: 'luz/apagarLuz'
+  },
+
 
 
   /***************************************************************************

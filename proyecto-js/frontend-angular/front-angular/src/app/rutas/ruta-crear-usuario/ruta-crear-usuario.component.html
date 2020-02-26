@@ -1,1 +1,7 @@
-<p>ruta-crear-usuario works!</p>
+<h2>Registrar usuario</h2>
+
+<app-modal-crear-usuario
+  [nombreBoton]="'Registrar'"
+  (formularioValido)="crearUsuario($event)"
+>
+</app-modal-crear-usuario>

@@ -12,6 +12,7 @@ module.exports = {
     nombreRol:{
       type:'string',
       unique: true,
+      required: true,
       minLength: 3,
       maxLength: 20
     },

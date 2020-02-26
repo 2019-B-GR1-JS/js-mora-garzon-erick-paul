@@ -10,7 +10,7 @@ module.exports = {
   attributes: {
 
     numHabitacion:{
-      type:'number',
+      type:'string',
       required: true,
       unique: true
     },

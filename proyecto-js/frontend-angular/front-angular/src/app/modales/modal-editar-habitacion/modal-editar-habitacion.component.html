@@ -1,1 +1,61 @@
-<p>modal-editar-habitacion works!</p>
+
+<h1 mat-dialog-title *ngIf="data.habitacion">Editar habitacion</h1>
+<h1 mat-dialog-title *ngIf="crear">Crear habitacion</h1>
+<div mat-dialog-content>
+  <form #formularioEditar="ngForm">
+    <div>
+      <label for="numeroId">
+        Numero
+      </label>
+      <input id="numeroId"
+             type="text"
+             name="numHabitacion"
+             required
+             [(ngModel)]="numHabitacion">
+    </div>
+
+    <div>
+      <label for="estadoId">
+        Estado
+      </label>
+      <input id="estadoId"
+             type="text"
+             name="estado"
+             required
+             [(ngModel)]="estado">
+    </div>
+
+    <div>
+      <label for="tipoHabitacionId">
+        Tipo habitacion
+      </label>
+      <input id="tipoHabitacionId"
+             type="text"
+             name="tipoHabitacion"
+             required
+             [(ngModel)]="tipoHabitacion">
+    </div>
+
+
+    <div>
+      <label for="idPisoId">
+        ID Piso
+      </label>
+      <input id="idPisoId"
+             type="text"
+             name="idPiso"
+             disabled
+             [(ngModel)]="idPiso">
+    </div>
+
+  </form>
+</div>
+<div mat-dialog-actions>
+  <p-button label = "Cancelar"
+            styleClass="ui-button-secondary"
+            (onClick)="cancelar()"></p-button>
+  <p-button label = "Aceptar"
+            styleClass="ui-button-success"
+            (onClick)="aceptar()"></p-button>
+</div>
+

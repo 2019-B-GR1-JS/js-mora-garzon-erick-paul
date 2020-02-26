@@ -27,11 +27,6 @@ module.exports = {
       minLength: 10,
       maxLength: 15
     },
-    direccion:{
-      type: 'string',
-      minLength: 5,
-      maxLength: 60
-    },
     telefono:{
       type: 'string',
       minLength: 5,
@@ -49,6 +44,14 @@ module.exports = {
       required: true,
       minLength: 5,
       maxLength: 20
+    },
+    rol: {
+      type: 'string',
+      isIn: [
+        'Administrador',
+        'Usuario'
+      ],
+      defaultsTo: 'Usuario'
     },
     usuariosPorHabitacion:{
       collection:'habitacionPorUsuario', // Modelo Hijo

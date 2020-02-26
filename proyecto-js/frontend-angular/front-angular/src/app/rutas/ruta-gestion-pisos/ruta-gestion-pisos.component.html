@@ -1,1 +1,94 @@
-<p>ruta-gestion-pisos works!</p>
+<h1>Gestion de pisos</h1>
+
+<div>
+  <button
+    pButton
+    class="ui-button-success"
+    label="Nuevo Piso"
+    routerLink="/menu/gestion-pisos/registrar-piso">
+  </button>
+  <router-outlet></router-outlet>
+</div>
+
+<p></p>
+
+<span class="ui-float-label">
+<input id="float-input"
+       type="text"
+       size="30"
+       [(ngModel)]="busquedaPiso"
+       pInputText>
+    <label for="float-input">
+      Buscar por nivel
+    </label>
+
+</span>
+
+<p-button label="Buscar" (onClick)="buscar()">
+
+</p-button>
+
+<div>
+
+  <p-table [value]="pisos" [paginator]="true" [rows]="FILAS">
+    <ng-template pTemplate="caption">
+      Lista de pisos
+    </ng-template>
+    <ng-template pTemplate="header">
+      <tr>
+        <th *ngFor="let columna of columnas">
+          {{columna.header}}
+        </th>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-piso>
+      <tr>
+        <td *ngFor="let columna of columnas">
+
+          <div *ngIf="columna.field==='id'">
+
+            <div *ngIf="columna.header=='Nivel'">
+              {{piso[columna.field]}}
+            </div>
+
+            <div *ngIf="columna.header=='Acciones'">
+
+              <p-button label="EDITAR" (click)="editar(piso)">
+
+              </p-button>
+
+              <button pButton
+                      label="ELIMINAR"
+                      class="ui-button-danger"
+                      (click)="eliminar(piso)">
+
+              </button>
+
+              <a [routerLink]="[
+                '/menu',
+                'gestion-pisos',
+                piso.id,
+                'gestion-habitaciones'
+                ]">
+                <p-button label="Gestionar Habitaciones"></p-button>
+              </a>
+
+
+            </div>
+
+          </div>
+
+          <div *ngIf="columna.field!=='id'">
+
+            {{piso[columna.field]}}
+
+          </div>
+
+
+        </td>
+      </tr>
+    </ng-template>
+  </p-table>
+
+</div>
+

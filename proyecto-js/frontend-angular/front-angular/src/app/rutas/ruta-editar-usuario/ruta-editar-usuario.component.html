@@ -1,0 +1,13 @@
+
+
+<div *ngIf="usuarioAActualizar">
+
+  <app-modal-editar-usuario
+
+    [nombreUsuario]="usuarioAActualizar.nombre"
+    [nombreBoton]="'Actualizar'"
+    (formularioValido)="actualizarUsuario($event)"
+  >
+  </app-modal-editar-usuario>
+
+</div>
